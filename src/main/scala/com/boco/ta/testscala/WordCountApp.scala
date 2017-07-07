@@ -18,7 +18,7 @@ object WordCountApp {
     conf.setAppName("TestSpark")
     //通过setMaster来设置程序要链接的Spark集群的Master的URL,如果设置为local, 
     //则代表Spark程序在本地运行，特别适合于机器配置条件非常差的情况。 
-    conf.setMaster("local") //设置local使程序在本地运行，不需要安装Spark集群 
+//    conf.setMaster("local") //设置local使程序在本地运行，不需要安装Spark集群 
     var sc = new SparkContext(conf)
     var lines = sc.textFile(args(0), 1)
     //对每一行的字符串进行拆分并把所有行的拆分结果通过flat合并成一个大的集合  
